@@ -38,8 +38,8 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
-        username: acepunk123
-        password: dckr_pat_J0HSopfMkw9h2TnqqFaYKfpXqN4
+        username: ${{ DOCKER_USERNAME }}
+        password: ${{ DOCKER_PASSWORD }}
         
     - name: Push Docker Image
       run: docker push acepunk123/hello-world-java-demo:0.0.2.Release
